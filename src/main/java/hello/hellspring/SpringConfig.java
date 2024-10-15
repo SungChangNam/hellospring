@@ -1,6 +1,7 @@
 package hello.hellspring;
 
 import hello.hellspring.repository.JdbcMemberRepository;
+import hello.hellspring.repository.JdbcTemplateMemberRepository;
 import hello.hellspring.repository.MemberRepository;
 import hello.hellspring.repository.MemoryMemberRepository;
 import hello.hellspring.service.MemberService;
@@ -32,6 +33,7 @@ public class SpringConfig {
     public MemberRepository memberRepository() {
 
         //return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+        //return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }
