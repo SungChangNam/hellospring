@@ -35,7 +35,6 @@ class MemberServiceIntegrationTest {
         Member findMember = memberService.findOne(saveID).get();
         assertThat(member.getName()).isEqualTo(findMember.getName());
 
-
     }
 
     @Test
@@ -56,7 +55,4 @@ class MemberServiceIntegrationTest {
         //then
 
     }
-
-
-
 }
