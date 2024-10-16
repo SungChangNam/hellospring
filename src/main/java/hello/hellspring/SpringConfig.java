@@ -1,5 +1,6 @@
 package hello.hellspring;
 
+import hello.hellspring.aop.TimeTraceAop;
 import hello.hellspring.repository.*;
 import hello.hellspring.service.MemberService;
 import jakarta.persistence.EntityManager;
@@ -22,6 +23,8 @@ public class SpringConfig {
     public MemberService memberService() {
         return new MemberService(memberRepository);
     }
+
+
 
   /*  @Bean
     public MemberRepository memberRepository() {
